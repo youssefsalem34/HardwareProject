@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6078abfb1e075374b8e61cdb35980bc7, type: 3}
+  m_Name: Dishes
+  m_EditorClassIdentifier: 
+  CoqauVinIngredients:
+  - {fileID: 2439370366217696405, guid: f0aeedbf290021d4cb70d872b2b34328, type: 3}
+  - {fileID: 2860595387792280933, guid: 93e4bfa06acd26e4abe60019e56293e0, type: 3}
+  - {fileID: 779828352068123019, guid: 3a9de05f04563f74e8261c5e7178cf71, type: 3}
+  - {fileID: 7988929812517117115, guid: dd4a45555ebd81d44aa968c9ec575ef1, type: 3}
+  - {fileID: 5566565074858644923, guid: 43be630f5d33d9349b300b9d21084533, type: 3}
+  - {fileID: 5009090613716468474, guid: 32aad8fc5085e704c81c94a2550f47cd, type: 3}
+  tiramisuIngredients:
+  - {fileID: 8150853256997303232, guid: 2af595a469d90a3489a7ebc8080cd22c, type: 3}
+  - {fileID: 9026648178783221896, guid: 2d2f8eb945ba8c14181f6a84963c4851, type: 3}
+  - {fileID: 7775283303739858187, guid: 1595024f45fe93c4288417dc0b328956, type: 3}
+  - {fileID: 5859557618110455650, guid: 9e2f5954acdfec747953ba5b7501fa89, type: 3}
+  - {fileID: 3955818251451361242, guid: d4f047abcf78dd84ea744c4a7bd9e590, type: 3}
+  dumplingsIngredients:
+  - {fileID: 7323690933207625254, guid: 30072918d4f34f64aa529b6e514efeb9, type: 3}
+  - {fileID: 643069468475645797, guid: 28b9a255fde15f8458cb6285a609d970, type: 3}
+  - {fileID: 8619133855079637921, guid: 7cda8c5fd415f7b4bb57d1ad624912c2, type: 3}
+  - {fileID: 90801815711892188, guid: d27581b62681fa74983e7c1765cd840d, type: 3}
+  - {fileID: 3774076560835773228, guid: a80e28e3c1bcd1e469529c7f3ad2bc5a, type: 3}
+  - {fileID: 5566565074858644923, guid: 43be630f5d33d9349b300b9d21084533, type: 3}
+  - {fileID: 7988929812517117115, guid: dd4a45555ebd81d44aa968c9ec575ef1, type: 3}
+  - {fileID: 6510481480040774471, guid: b4ed1b3fc29c91647a967c8012f4451e, type: 3}
+  - {fileID: 3593539094094098579, guid: b7b85579dacfbd04e8922a57fa143d9f, type: 3}
+  shakshukaIngredients:
+  - {fileID: 2094464699020033212, guid: f00e30367ede1c9429a729887db910a5, type: 3}
+  - {fileID: 8855526585076557629, guid: 732d1f3da29080a429b2a1893cbdceff, type: 3}
+  - {fileID: 5566565074858644923, guid: 43be630f5d33d9349b300b9d21084533, type: 3}
+  - {fileID: 6394146673476089654, guid: bddcbac40a6065d4cbd955dd0596a339, type: 3}
+  - {fileID: 5009090613716468474, guid: 32aad8fc5085e704c81c94a2550f47cd, type: 3}
+  - {fileID: 2163852752249972449, guid: e00f5216a51453c4680a01cbb2d6dc1f, type: 3}
+  - {fileID: 7988929812517117115, guid: dd4a45555ebd81d44aa968c9ec575ef1, type: 3}
+  churrosIngredients:
+  - {fileID: 7481148634160634366, guid: 2c5b461f6e62b5542ad7e57f931ff1c6, type: 3}
+  - {fileID: 3955818251451361242, guid: d4f047abcf78dd84ea744c4a7bd9e590, type: 3}
+  - {fileID: 5566565074858644923, guid: 43be630f5d33d9349b300b9d21084533, type: 3}
+  - {fileID: 5859557618110455650, guid: 9e2f5954acdfec747953ba5b7501fa89, type: 3}
+  score: 240
