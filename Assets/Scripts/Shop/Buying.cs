@@ -21,11 +21,15 @@ public class Buying : MonoBehaviour
     [SerializeField] private GameObject shakshukaCube;
 
 
-    private AudioSource audioSource;
+
+    [SerializeField] private CustomizeMenu menuScript;
+
+
+    [SerializeField] private AudioSource audioSource;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        audioSource = GetComponent<AudioSource>();
+       // audioSource = GetComponent<AudioSource>();
         if(dishScript.ContainsTiramisu())
         {
             tiramisuCube.SetActive(false);
@@ -82,6 +86,7 @@ public class Buying : MonoBehaviour
             dishScript.dishesList.Add(dishScript.tiramisuIngredients);
             audioSource.Play();
             tiramisuCube.SetActive(false);
+            menuScript.buy = true;
         }
     }
 
@@ -96,6 +101,7 @@ public class Buying : MonoBehaviour
             dishScript.dishesList.Add(dishScript.dumplingsIngredients);
             audioSource.Play();
             dumplingCube.SetActive(false);
+            menuScript.buy = true;
         }
     }
 
@@ -110,6 +116,7 @@ public class Buying : MonoBehaviour
             dishScript.dishesList.Add(dishScript.shakshukaIngredients);
             audioSource.Play();
             shakshukaCube.SetActive(false);
+            menuScript.buy = true;
         }
     }
 
@@ -124,6 +131,7 @@ public class Buying : MonoBehaviour
             dishScript.dishesList.Add(dishScript.churrosIngredients);
             audioSource.Play();
             churrosCube.SetActive(false);
+            menuScript.buy = true;
         }
     }
 

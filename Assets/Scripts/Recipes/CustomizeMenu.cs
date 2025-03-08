@@ -16,57 +16,84 @@ public class CustomizeMenu : MonoBehaviour
     [SerializeField] private GameObject shakshukaCubeAdd;
     [SerializeField] private GameObject shakshukaCubeRemove;
 
+
+
+
+    [SerializeField] public bool buy;
+
     void Start()
     {
-      //  customizeMenu.SetActive(false); 
+        //  customizeMenu.SetActive(false); 
 
 
         // CHECK IF PLAYER HAS BOUGHT THE RECIPE, IF YES THEN ACTIVATE BOTH REMOVE AND ADD BUTTONS
 
+        buy = false;
+
+        CheckCubes();
+    }
 
 
-        //if (dishScript.menuList.Contains(dishScript.tiramisuIngredients))
-        //{
-        //    tiramisuCube.SetActive(false);
-        //}
-        //else
-        //{
-
-        //}
-
-
-        //if (dishScript.menuList.Contains(dishScript.dumplingsIngredients))
-        //{
-        //    dumplingCube.SetActive(false);
-        //}
-        //else
-        //{
-
-        //}
-
-
-        //if (dishScript.menuList.Contains(dishScript.shakshukaIngredients))
-        //{
-        //    shakshukaCube.SetActive(false);
-        //}
-        //else
-        //{
-
-        //}
-
-
-        //if (dishScript.menuList.Contains(dishScript.churrosIngredients))
-        //{
-        //    churrosCube.SetActive(false);
-        //}
-        //else
-        //{
-
-        //}
+    void Update()
+    {
+        if(buy)
+        {
+            CheckCubes();
+            buy = false;   
+        }
     }
 
 
 
+    void CheckCubes()
+    {
+        if (dishScript.menuList.Contains(dishScript.tiramisuIngredients))
+        {
+            tiramisuCubeAdd.SetActive(true);
+            tiramisuCubeRemove.SetActive(true);
+        }
+        else
+        {
+            tiramisuCubeAdd.SetActive(false);
+            tiramisuCubeRemove.SetActive(false);
+        }
+
+
+        if (dishScript.dishesList.Contains(dishScript.dumplingsIngredients))
+        {
+            dumplingCubeAdd.SetActive(true);
+            dumplingCubeRemove.SetActive(true);
+        }
+        else
+        {
+            dumplingCubeAdd.SetActive(false);
+            dumplingCubeRemove.SetActive(false);
+        }
+
+
+        if (dishScript.dishesList.Contains(dishScript.shakshukaIngredients))
+        {
+            shakshukaCubeAdd.SetActive(true);
+            shakshukaCubeRemove.SetActive(true);
+        }
+        else
+        {
+            shakshukaCubeAdd.SetActive(false);
+            shakshukaCubeRemove.SetActive(false);
+        }
+
+
+        if (dishScript.dishesList.Contains(dishScript.churrosIngredients))
+        {
+            churrosCubeAdd.SetActive(true);
+            churrosCubeRemove.SetActive(true);
+        }
+        else
+        {
+            churrosCubeAdd.SetActive(false);
+            churrosCubeRemove.SetActive(false);
+        }
+    }
 
     public void AddTiramisu()
     {
