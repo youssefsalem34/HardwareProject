@@ -25,7 +25,8 @@ public class PickCustomer : MonoBehaviour
     public bool destroyCustomer;
     public bool spawnOtherCustomers;
 
-    private AudioSource audioSource;
+    [SerializeField] private AudioSource audioSource;
+   [SerializeField] private AudioSource correctBan;
 
 
 
@@ -146,6 +147,7 @@ public class PickCustomer : MonoBehaviour
         newDishScript.newDish = true;
 
         destroyCustomer = true;
+        correctBan.Play();
 
         //Destroy previous customer here
 

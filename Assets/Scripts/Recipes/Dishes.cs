@@ -16,8 +16,8 @@ public class Dishes : ScriptableObject
     public Dictionary<List<GameObject>, string> dishNames = new Dictionary<List<GameObject>, string>();
 
     [SerializeField] private int score;
-
-
+    public bool fruitDone;
+    
 
     public void InitializeMenu()
     {
@@ -44,6 +44,14 @@ public class Dishes : ScriptableObject
     public void IncreaseScoree(int value)
     {
         score += value;
+    }
+
+    public void Clear()
+    {
+        score = 0;
+        menuList.Clear(); // This clears the list
+        dishesList.Clear(); // This clears the list
+        dishesList.Add(CoqauVinIngredients);
     }
 
     public void InitializeDishesList()

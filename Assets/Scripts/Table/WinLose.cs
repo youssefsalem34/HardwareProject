@@ -16,11 +16,29 @@ public class WinLose : MonoBehaviour
 
     [SerializeField] private GameObject shopButton;
     [SerializeField] private GameObject customizeButton;
+    [SerializeField] private GameObject firework1;
+    [SerializeField] private GameObject firework2;
+    [SerializeField] private GameObject fruitText;
+
+
+
+    [SerializeField] private ResetFruit resetFruitScript;
+
+    //Play fruit animation here
+    public Animator animator;
+
+
+   
 
     private bool scoreConditionMet; // Flag to track if the score condition is already processed
+    [SerializeField] private UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable interactableFruit;
+
+    //finish dish interactable
+    [SerializeField] private UnityEngine.XR.Interaction.Toolkit.Interactables.XRSimpleInteractable interactablee;
 
     void Start()
     {
+       // dishesScript.fruitDone = false;
         scoreConditionMet = false;
        // pauseBackground.SetActive(false);
         score = scoreObject.GetComponent<Score>();
@@ -37,7 +55,7 @@ public class WinLose : MonoBehaviour
         {
             scoreConditionMet = true; // Set the flag to prevent re-execution
 
-            Time.timeScale = 0; // Pause the game
+           // Time.timeScale = 0; // Pause the game
             pauseBackground.SetActive(true); // Show pause background
             win.SetActive(true); // Display win screen
             shopButton.SetActive(true);
@@ -45,6 +63,21 @@ public class WinLose : MonoBehaviour
             if (interactable != null)
             {
                 interactable.enabled = false;
+                interactablee.enabled = false;
+
+            }
+
+            if (dishesScript.fruitDone)
+            {
+                resetFruitScript.ResetScoreAndRecipes();
+                win.SetActive(false);
+                fruitText.SetActive(true);
+                animator.SetBool("Victory", true);
+                firework1.SetActive(true);
+                firework2.SetActive(true);
+                interactableFruit.enabled = true;
+                shopButton.SetActive(false);
+                customizeButton.SetActive(false);
             }
             // shop.SetActive(true); // Enable next level UI button
 

@@ -5,7 +5,7 @@ public class CuttingBoardTagCheck : MonoBehaviour
     [SerializeField] private GameObject cuttingText;
 
     // List of valid tags for the trigger
-    private readonly string[] validTags = {"Bacon","CutBacon","BaconHolder", "Cabbage","CutCabbage", "CabbageHolder",  "Parsley", "Coriander"};
+    private readonly string[] validTags = {"Bacon","CutBacon","BaconHolder", "Cabbage","CutCabbage", "CabbageHolder",  "CutOnion", "CutCarrot"};
 
     void Start()
     {

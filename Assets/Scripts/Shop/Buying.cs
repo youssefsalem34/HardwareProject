@@ -94,7 +94,7 @@ public class Buying : MonoBehaviour
     {
         if (dishScript.ShowScore() >= dumplingsPrice)
         {
-            Debug.Log("Tiramisu Bought");
+            Debug.Log("Dumplings Bought");
             //Deducting the cost of tiramisu recipe from the overall score in the scriptable object Dishes
             dishScript.DeductScore(dumplingsPrice);
             // Add tiramisu to the list of dishes inside the scriptable object Dishes
@@ -109,7 +109,7 @@ public class Buying : MonoBehaviour
     {
         if (dishScript.ShowScore() >= shakshukaPrice)
         {
-            Debug.Log("Tiramisu Bought");
+            Debug.Log("Shakshuka Bought");
             //Deducting the cost of tiramisu recipe from the overall score in the scriptable object Dishes
             dishScript.DeductScore(shakshukaPrice);
             // Add tiramisu to the list of dishes inside the scriptable object Dishes
@@ -124,7 +124,7 @@ public class Buying : MonoBehaviour
     {
         if (dishScript.ShowScore() >= churrosPrice)
         {
-            Debug.Log("Tiramisu Bought");
+            Debug.Log("Churros Bought");
             //Deducting the cost of tiramisu recipe from the overall score in the scriptable object Dishes
             dishScript.DeductScore(churrosPrice);
             // Add tiramisu to the list of dishes inside the scriptable object Dishes

@@ -17,6 +17,7 @@ public class CheckIngredients : MonoBehaviour
     [SerializeField] private GameObject missingText;
 
     [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioSource wrongServe;
    
 
     [SerializeField] private PickCustomer customerCheck;
@@ -74,6 +75,7 @@ public class CheckIngredients : MonoBehaviour
                     uiScore.DecreaseScore(losePerBan);
                 }
                 currentDish.newDish = true;
+                wrongServe.Play();
 
                 button.transform.localPosition = new Vector3(0, 0.43f, 0);
                 missingText.SetActive(false);

@@ -20,13 +20,44 @@ public class Score : MonoBehaviour
     //public int timer;
     public float time;
 
+    [SerializeField] private bool resetScore;
+
+
+    [SerializeField] private bool timerDone;
+
+
+    void Start()
+    {
+        timerDone = true;
+    }
 
     private void Update()
     {
+
+        if (resetScore)
+        {
+            score = 0;
+            resetScore = false;
+        }
+
+
+        if(score < 0)
+        {
+            resetScore = true;
+        }
         
         DisplayListContents();
-        time = time - Time.deltaTime;
-        UpdateTimerDisplay();
+
+        if (pauseBackground.activeSelf)
+        {
+           
+        }
+        else
+        {
+            time = time - Time.deltaTime;
+            UpdateTimerDisplay();
+        }
+     
         TimerDone();
 
 
@@ -42,9 +73,9 @@ public class Score : MonoBehaviour
     public void RestartScene()
     {
         SceneManager.LoadScene(1);
-        tiramisuCube.SetActive(false);
-        dumplingCube.SetActive(false);
-        churrosCube.SetActive(false);
+        //tiramisuCube.SetActive(false);
+        //dumplingCube.SetActive(false);
+        //churrosCube.SetActive(false);
     }
     //Click on shop to open the shop UI
     public void OpenShop()
@@ -66,17 +97,18 @@ public class Score : MonoBehaviour
     public void TimerDone()
     {
         //Timer ending and player losing the game conditions here
-        if(time <= 0)
+        if(time <= 0 && timerDone)
         {
-            Time.timeScale = 0;
+           // Time.timeScale = 0;
             pauseBackground.SetActive(true);
             lose.SetActive(true);
             shopButton.SetActive(true);
             customizeButton.SetActive(true);
+            timerDone = false;
         }
-        else{
-            Time.timeScale = 1;
-        }
+        //else{
+        //    Time.timeScale = 1;
+        //}
     }
     public void IncreaseScore(int value)
     {
@@ -85,6 +117,11 @@ public class Score : MonoBehaviour
     public void DecreaseScore(int value)
     {
         score -= value;
+    }
+
+    public void ScoreReset(int value)
+    {
+        score = value;
     }
 
     void DisplayListContents()

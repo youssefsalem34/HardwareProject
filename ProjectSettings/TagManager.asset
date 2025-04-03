@@ -48,6 +48,8 @@ TagManager:
   - Girl1
   - Girl2
   - CutOnion
+  - BurntChicken
+  - BurntEgg
   layers:
   - Default
   - TransparentFX

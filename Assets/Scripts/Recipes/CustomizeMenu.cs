@@ -18,8 +18,12 @@ public class CustomizeMenu : MonoBehaviour
 
 
 
+    [SerializeField] private WinLose winLose;
 
-    [SerializeField] public bool buy;
+
+
+
+    public bool buy;
 
     void Start()
     {
@@ -47,7 +51,7 @@ public class CustomizeMenu : MonoBehaviour
 
     void CheckCubes()
     {
-        if (dishScript.menuList.Contains(dishScript.tiramisuIngredients))
+        if (dishScript.dishesList.Contains(dishScript.tiramisuIngredients))
         {
             tiramisuCubeAdd.SetActive(true);
             tiramisuCubeRemove.SetActive(true);
@@ -92,6 +96,17 @@ public class CustomizeMenu : MonoBehaviour
         {
             churrosCubeAdd.SetActive(false);
             churrosCubeRemove.SetActive(false);
+        }
+
+
+        if (dishScript.menuList.Contains(dishScript.tiramisuIngredients) && dishScript.menuList.Contains(dishScript.dumplingsIngredients) && dishScript.menuList.Contains(dishScript.shakshukaIngredients) && dishScript.menuList.Contains(dishScript.churrosIngredients))
+        {
+            Debug.Log("All recipes added");
+            dishScript.fruitDone = true;
+        }
+        else if(!dishScript.menuList.Contains(dishScript.tiramisuIngredients) || !dishScript.menuList.Contains(dishScript.dumplingsIngredients) || !dishScript.menuList.Contains(dishScript.shakshukaIngredients) || !dishScript.menuList.Contains(dishScript.churrosIngredients))
+        {
+            dishScript.fruitDone = false;
         }
     }
 

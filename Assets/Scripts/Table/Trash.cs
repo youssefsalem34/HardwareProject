@@ -5,7 +5,7 @@ using System.Linq;
 public class Trash : MonoBehaviour
 {
     [SerializeField] private float radius;
-    string[] validTags = { "Chicken", "CookedChicken", "CookedEgg", "CutCarrot", "CookedOnion", "CutCabbage", "CutOnion", "CookedBacon", "CookedDough", "RedWine", "Carrots", "Salt", "Pepper", "Onion", "Sugar", "Egg", "Bacon", "CocoaPowder", "Coffee", "Tomatoe", "CutBacon", "Coriander", "Parsley", "BellPepper", "Water", "Cabbage", "Dough", "SoySauce", "GreenOnions", "Garlic", "Ginger", "Biscuits" };
+    string[] validTags = { "Chicken", "CookedChicken", "CookedEgg", "BurntChicken", "CutCarrot", "CookedOnion", "CutCabbage", "CutOnion", "CookedBacon", "CookedDough", "RedWine", "Carrots", "Salt", "Pepper", "Onion", "Sugar", "Egg", "Bacon", "CocoaPowder", "Coffee", "Tomatoe", "CutBacon", "Coriander", "Parsley", "BellPepper", "Water", "Cabbage", "Dough", "SoySauce", "GreenOnions", "Garlic", "Ginger", "Biscuits" };
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
